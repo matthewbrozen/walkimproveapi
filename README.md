@@ -6,5 +6,5 @@
 
 
 #Project 4 Main repo
-![mainrepo](https://github.com/matthewbrozen/project4)  
+[main repo](https://github.com/matthewbrozen/project4)  
 ---------------------------------
