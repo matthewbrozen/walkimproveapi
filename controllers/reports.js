@@ -34,7 +34,7 @@ function create(req, res, next) {
   report.id = req.body.id;
   report.save(function(err, report) {
     if (err) throw err;
-    res.json({newReport: report})
+    res.json({newReport: report});
   });
 }
 
