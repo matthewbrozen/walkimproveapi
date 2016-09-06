@@ -20,6 +20,7 @@ function update(req, res, next) {
     if(req.body.intersection) {report.intersection= req.body.intersection;}
     if(req.body.direction) {report.direction = req.body.direction;}
     if(req.body.details) {report.details = req.body.details;}
+    if(req.body.id) {report.id = req.body.id;}
     report.save(function(err, report) {
       res.json({updatedReport: report});
     });
