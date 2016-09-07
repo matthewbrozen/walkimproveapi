@@ -13,7 +13,7 @@ var http = require('http');
  */
 
 var port = process.env.PORT || '3000';
-var db = process.env.MONGODB_URI || 'mongodb://localhost/walkimproveapi';
+var db = process.env.MONGODB_URI || 'mongodb://localhost:27017/walkimproveapi';
 
 
 
