@@ -13,6 +13,10 @@ var http = require('http');
  */
 
 var port = normalizePort(process.env.PORT || '3000');
+var db = process.env.MONGODB_URI || 'mongodb://localhost/walkimproveapi';
+
+
+
 app.set('port', port);
 
 /**
