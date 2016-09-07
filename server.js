@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/walkimproveapi')
+mongoose.connect('mongodb://127.0.0.1/walkimproveapi')
 
 // view engine setup EJS
 app.set('views', path.join(__dirname, 'views'));
