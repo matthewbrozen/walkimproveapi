@@ -1,5 +1,7 @@
 var Report = require('../models/report');
 
+
+//index
 function indexFunc(req, res, next) {
   Report.find({}, function(err, reports) {
     if (err) throw err;
@@ -7,6 +9,7 @@ function indexFunc(req, res, next) {
   }).select('-_v');
 }
 
+//show a report
 function show(req, res, next) {
   Report.findOne({_id: _id}, function(err, report) {
     if (err) throw err;
@@ -14,6 +17,8 @@ function show(req, res, next) {
   }).select('-_v');
 }
 
+
+//update a report
 function update(req, res, next) {
   var id = request.params.id;
   Report.findOne({_id:id}, function(err, report) {
@@ -28,6 +33,7 @@ function update(req, res, next) {
   }).select('-_v');
 }
 
+//create a report
 function create(req, res, next) {
   var report = new Report();
   report.intersection = req.body.intersection;
@@ -40,6 +46,7 @@ function create(req, res, next) {
   });
 }
 
+//destroy a report
 function destroy(req, res, next) {
   var id = req.params.id;
   console.log(id);
@@ -49,6 +56,7 @@ function destroy(req, res, next) {
   }).select('-_v');
 }
 
+//export functions
 module.exports = {
   getAll: indexFunc,
   addOne: create,

@@ -8,6 +8,8 @@ var app = require('../server');
 var debug = require('debug')('walkimproveapi:server');
 var http = require('http');
 
+var env = require('../config/environment')
+
 /**
  * Get port from environment and store in Express.
  */
