@@ -29,10 +29,10 @@ function update(req, res, next) {
 }
 
 function create(req, res, next) {
-  var report = new Report(request.body);
-  // report.intersection = req.body.intersection;
-  // report.direction = req.body.direction;
-  // report.details = req.body.details;
+  var report = new Report();
+  report.intersection = req.body.intersection;
+  report.direction = req.body.direction;
+  report.details = req.body.details;
   // report.id = req.body.id;
   report.save(function(err, report) {
     if (err) throw err;
@@ -41,7 +41,7 @@ function create(req, res, next) {
 }
 
 function destroy(req, res, next) {
-  var id = req.params.id;
+  var id = req.params._id;
   Report.remove({_id: id}, function(err) {
     if (err) throw err;
     res.json({message: "Report successfully deleted"});
