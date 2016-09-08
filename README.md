@@ -6,6 +6,8 @@
 
 * Approach taken: research well documented MEN stack RESTful api, review options, determine time frame of options and determine the most efficient approach. Then using Mongodb, express and node express generate a new application then customize the configuration for sidewalk reports.
 
+* Install instructions: git clone https://github.com/matthewbrozen/walkimproveapi, $ npm install, touch .env, add backend url and token secret, touch a Procfile with web: node bin/www inside, start nodemon.
+
 * Unsolved Problems: Authentication and authorization using JWT and passport.
 
 * RESTful Routes
