@@ -41,7 +41,8 @@ function create(req, res, next) {
 }
 
 function destroy(req, res, next) {
-  var id = req.params._id;
+  var id = req.params.id;
+  console.log(id);
   Report.remove({_id: id}, function(err) {
     if (err) throw err;
     res.json({message: "Report successfully deleted"});

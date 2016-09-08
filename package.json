@@ -14,7 +14,9 @@
     "express": "~4.13.4",
     "favicon": "0.0.2",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.6.0",
+    "mongoose-bcrypt": "^1.4.2",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
   }
