@@ -20,7 +20,7 @@ function update(req, res, next) {
     if(req.body.intersection) {report.intersection= req.body.intersection;}
     if(req.body.direction) {report.direction = req.body.direction;}
     if(req.body.details) {report.details = req.body.details;}
-    if(req.body.id) {report.id = req.body.id;}
+    // if(req.body.id) {report.id = req.body.id;}
     report.save(function(err, report) {
       res.json({updatedReport: report});
     });
@@ -32,7 +32,7 @@ function create(req, res, next) {
   report.intersection = req.body.intersection;
   report.direction = req.body.direction;
   report.details = req.body.details;
-  report.id = req.body.id;
+  // report.id = req.body.id;
   report.save(function(err, report) {
     if (err) throw err;
     res.json({newReport: report});
@@ -40,7 +40,7 @@ function create(req, res, next) {
 }
 
 function destroy(req, res, next) {
-  var id = req.params.id;
+  var id = req.params._id;
   Report.remove({id: id}, function(err) {
     if (err) throw err;
     res.json({message: "Report successfully deleted"});
