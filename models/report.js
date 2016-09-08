@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var reportSchema = mongoose.Schema({
-  id: Number,
+  // id: Number,
   intersection: String,
   direction: String,
   details: String
