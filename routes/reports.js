@@ -9,7 +9,7 @@ router.use(function(req, res, next) {
   next();
 });
 
-router.get('/', reportsController.getAll)
+router.get('/', reportsController.getAll);
 router.get('/:id', reportsController.getOne);
 router.put('/:id', reportsController.changeOne);
 router.post('/', reportsController.addOne);

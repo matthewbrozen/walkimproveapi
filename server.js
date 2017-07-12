@@ -21,7 +21,6 @@ mongoose.connect(db)
 // view engine setup EJS
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 //allow cors
 app.use(allowCors);
 
